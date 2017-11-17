@@ -1,0 +1,10 @@
+Installation Instructions:
+
+Extract the testcms.zip to your desired folder.
+Change the file permissions to allow all users write access to the folder you extracted testcms to.
+Create a database in MySQL for TestCMS.
+Register that folder with your webserver of choice.
+Assure that htaccess.txt or .htaccess is accessable for Apache on your webserver.
+Go to a web browser and go to the index page of testcms and follow the further instructions to finish your setup.
+
+If you have any questions, email wagnertrust2012@gmail.com.

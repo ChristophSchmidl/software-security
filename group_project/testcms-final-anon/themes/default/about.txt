@@ -1,0 +1,5 @@
+Theme name:    Default
+Description:   Default Theme
+Author name:   Test CMS
+Author site:   http://google.com
+License:       WTFPL (http://sam.zoy.org/wtfpl/COPYING)
