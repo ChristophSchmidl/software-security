@@ -9,25 +9,25 @@
 
 ## Session Management
 
-* V3.6: Verify that the session id is never disclosed in URLs, error messages, or logs. This includes verifying that the application does not support URL rewriting of session cookies.
-* V3.17: Verify that an active session list is displayed in the account profile or similar of each user. The user should be able to terminate any active session.
+- [ ] V3.6: Verify that the session id is never disclosed in URLs, error messages, or logs. This includes verifying that the application does not support URL rewriting of session cookies.
+- [ ] V3.17: Verify that an active session list is displayed in the account profile or similar of each user. The user should be able to terminate any active session.
 
 ## Access Control
 
-* V4.8: Verify that access controls fail securely.
+- [ ] V4.8: Verify that access controls fail securely.
 
 ## Malicious Input Control
 
-* V5.3: Verify that server side input validation failures result in request rejection and are logged.
-* V5.13: Verify that the application is not susceptible to Remote File Inclusion (RFI) or Local File Inclusion (LFI) when content is used that is a path to a file.
+- [ ] V5.3: Verify that server side input validation failures result in request rejection and are logged.
+- [ ] V5.13: Verify that the application is not susceptible to Remote File Inclusion (RFI) or Local File Inclusion (LFI) when content is used that is a path to a file.
 
 ## Error Handling and Logging
 
-* V8.13: Time sources should be synchronized to ensure logs have the correct time 
+- [ ] V8.13: Time sources should be synchronized to ensure logs have the correct time 
 
 ## Data protection
 
-* V9.4: "Verify that the application sets appropriate anti-caching headers as per the risk of the application, such as the following:
+- [ ] V9.4: "Verify that the application sets appropriate anti-caching headers as per the risk of the application, such as the following:
 Expires: Tue, 03 Jul 2001 06:00:00 GMT
 Last-Modified: {now} GMT
 Cache-Control: no-store, no-cache, must-revalidate, max-age=0 Cache-Control: post-check=0, pre-check=0
@@ -35,5 +35,5 @@ Pragma: no-cache"
 
 ## Http security configuration
 
-* V11.6: Verify that all API responses contain X-Content-Type-Options: nosniff and Content-Disposition: attachment; filename="api.json" (or other appropriate filename for the content type).
+- [ ] V11.6: Verify that all API responses contain X-Content-Type-Options: nosniff and Content-Disposition: attachment; filename="api.json" (or other appropriate filename for the content type).
 
