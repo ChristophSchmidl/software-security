@@ -1,5 +1,7 @@
 # Software Security - ASVS Checklist
 
+* [ASVS version 3](https://www.owasp.org/images/3/33/OWASP_Application_Security_Verification_Standard_3.0.1.pdf)
+
 ## Authentication
 
 - [ ] V2.4: Verify all authentication controls are enforced on the server side.
