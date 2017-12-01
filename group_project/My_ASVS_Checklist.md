@@ -117,8 +117,26 @@ For more information on auto-escaping, please see
 
 **Control objective**
 
+The primary objective of error handling and logging is to provide a useful reaction by the
+user, administrators, and incident response teams. The objective is not to create massive
+amounts of logs, but high quality logs, with more signal than discarded noise.
+High quality logs will often contain sensitive data, and must be protected as per local data
+privacy laws or directives. This should include:
 
-**Helpful References for Authentication**
+* Not collecting or logging sensitive information if not specifically required
+* Ensuring all logged information is handled securely and protected as per its data
+classification.
+* Ensuring that logs are not forever, but have an absolute lifetime that is as short as
+possible. 
+
+If logs contain private or sensitive data, the definition of which varies from country to
+country, the logs become some of the most sensitive information held by the application
+and thus very attractive to attackers in their own right.
+
+
+**Helpful References for Error Handling and Logging**
+
+* [OWASP Testing Guide 4.0 content: Testing for Error Handling](https://www.owasp.org/index.php/Testing_for_Error_Handling)
 
 
 **TODO**
@@ -129,9 +147,25 @@ For more information on auto-escaping, please see
 
 **Control objective**
 
+There are three key elements to sound data protection: Confidentiality, Integrity and
+Availability (CIA). This standard assumes that data protection is enforced on a trusted
+system, such as a server, which has been hardened and has sufficient protections.
+Applications have to assume that all user devices are compromised in some way. Where an
+application transmits or stores sensitive information on insecure devices, such as shared
+computers, phones and tablets, the application is responsible for ensuring data stored on
+these devices is encrypted and cannot be easily illicitly obtained, altered or disclosed.
+Ensure that a verified application satisfies the following high level data protection
+requirements:
 
-**Helpful References for Authentication**
+* **Confidentiality**: Data should be protected from unauthorised observation or
+disclosure both in transit and when stored.
+* **Integrity**: Data should be protected being maliciously created, altered or deleted by
+unauthorized attackers.
+* **Availability**: Data should be available to authorized users as required
 
+**Helpful References for Data protection**
+
+* [User Privacy Protection Cheat Sheet](https://www.owasp.org/index.php/User_Privacy_Protection_Cheat_Sheet)
 
 **TODO**
 
@@ -145,8 +179,19 @@ Pragma: no-cache"
 
 **Control objective**
 
+Ensure that a verified application satisfies the following high level requirements:
 
-**Helpful References for Authentication**
+* The application server is suitably hardened from a default configuration 
+* HTTP responses contain a safe character set in the content type header.
+
+
+**Helpful References for Http security configuration**
+
+* [OWASP Testing Guide 4.0: Testing for HTTP Verb Tampering ](https://www.owasp.org/index.php/Testing_for_HTTP_Verb_Tampering_%28OTG-INPVAL-003%29)
+* [Adding Content-Disposition to API responses helps prevent many attacks based on
+misunderstanding on the MIME type between client and server, and the "filename"
+option specifically helps prevent Reflected File Download attacks.](https://www.blackhat.com/docs/eu-14/materials/eu-14-Hafif-Reflected-File-Download-A-New-Web-Attack-Vector.pdf)
+* [https://www.owasp.org/index.php?title=Content_Security_Policy_Cheat_Sheet&setlang=en](https://www.owasp.org/index.php?title=Content_Security_Policy_Cheat_Sheet&setlang=en)
 
 
 **TODO**
