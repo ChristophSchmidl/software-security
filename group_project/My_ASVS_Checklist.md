@@ -2,10 +2,10 @@
 
 ## Authentication
 
-[ ] V2.4: Verify all authentication controls are enforced on the server side.
-[ ] V2.16: Verify that credentials are transported using a suitable encrypted link and that all pages/functions that require a user to enter credentials are done so using an encrypted link.
-[ ] V2.22: Verify that forgotten password and other recovery paths use a TOTP or other soft token, mobile push, or other offline recovery mechanism. Use of a random value in an e-mail or SMS should be a last resort and is known weak
-[ ] V2.33: Browser autocomplete, and integration with password managers are permitted unless prohibited by risk based policy.
+- [ ] V2.4: Verify all authentication controls are enforced on the server side.
+- [ ] V2.16: Verify that credentials are transported using a suitable encrypted link and that all pages/functions that require a user to enter credentials are done so using an encrypted link.
+- [ ] V2.22: Verify that forgotten password and other recovery paths use a TOTP or other soft token, mobile push, or other offline recovery mechanism. Use of a random value in an e-mail or SMS should be a last resort and is known weak
+- [ ] V2.33: Browser autocomplete, and integration with password managers are permitted unless prohibited by risk based policy.
 
 ## Session Management
 
