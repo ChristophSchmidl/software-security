@@ -23,16 +23,16 @@ transported in a secure manner.
 
 **TODO**
 
-- [ ] V2.4: Verify all authentication controls are enforced on the server side.
+- [x] V2.4: Verify all authentication controls are enforced on the server side.
 
-- [ ] V2.16: Verify that credentials are transported using a suitable encrypted link and that all pages/functions that require a user to enter credentials are done so using an encrypted link.
+- [x] V2.16: Verify that credentials are transported using a suitable encrypted link and that all pages/functions that require a user to enter credentials are done so using an encrypted link.
 	* Evaulation is based on [Testing for Credentials Transported over an Encrypted Channel (OTG-AUTHN-001)](https://www.owasp.org/index.php/Testing_for_Credentials_Transported_over_an_Encrypted_Channel_(OTG-AUTHN-001))
 
-- [ ] V2.22: Verify that forgotten password and other recovery paths use a TOTP or other soft token, mobile push, or other offline recovery mechanism. Use of a random value in an e-mail or SMS should be a last resort and is known weak
+- [x] V2.22: Verify that forgotten password and other recovery paths use a TOTP or other soft token, mobile push, or other offline recovery mechanism. Use of a random value in an e-mail or SMS should be a last resort and is known weak
 	* Evaluation is based on [Testing for Vulnerable Remember Password (OTG-AUTHN-005)](https://www.owasp.org/index.php/Testing_for_Vulnerable_Remember_Password_(OTG-AUTHN-005))
 	* Evaluation is based on [Testing for weak password change or reset functionalities (OTG-AUTHN-009)](https://www.owasp.org/index.php/Testing_for_weak_password_change_or_reset_functionalities_(OTG-AUTHN-009))
 
-- [ ] V2.33: Browser autocomplete, and integration with password managers are permitted unless prohibited by risk based policy.
+- [x] V2.33: Browser autocomplete, and integration with password managers are permitted unless prohibited by risk based policy.
 	* Evaluation is based on [Testing for Browser cache weakness (OTG-AUTHN-006)](https://www.owasp.org/index.php/Testing_for_Browser_cache_weakness_(OTG-AUTHN-006))
 
 ## Session Management
@@ -58,8 +58,8 @@ inactivity.
 
 **TODO**
 
-- [ ] V3.6: Verify that the session id is never disclosed in URLs, error messages, or logs. This includes verifying that the application does not support URL rewriting of session cookies.
-- [ ] V3.17: Verify that an active session list is displayed in the account profile or similar of each user. The user should be able to terminate any active session.
+- [x] V3.6: Verify that the session id is never disclosed in URLs, error messages, or logs. This includes verifying that the application does not support URL rewriting of session cookies.
+- [x] V3.17: Verify that an active session list is displayed in the account profile or similar of each user. The user should be able to terminate any active session.
 
 ## Access Control
 
@@ -79,7 +79,7 @@ them. Ensure that a verified application satisfies the following high level requ
 
 **TODO**
 
-- [ ] V4.8: Verify that access controls fail securely.
+- [x] V4.8: Verify that access controls fail securely.
 
 ## Malicious Input Control
 
