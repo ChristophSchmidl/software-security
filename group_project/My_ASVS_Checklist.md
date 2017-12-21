@@ -24,9 +24,16 @@ transported in a secure manner.
 **TODO**
 
 - [ ] V2.4: Verify all authentication controls are enforced on the server side.
+
 - [ ] V2.16: Verify that credentials are transported using a suitable encrypted link and that all pages/functions that require a user to enter credentials are done so using an encrypted link.
+	* Evaulation is based on [Testing for Credentials Transported over an Encrypted Channel (OTG-AUTHN-001)](https://www.owasp.org/index.php/Testing_for_Credentials_Transported_over_an_Encrypted_Channel_(OTG-AUTHN-001))
+
 - [ ] V2.22: Verify that forgotten password and other recovery paths use a TOTP or other soft token, mobile push, or other offline recovery mechanism. Use of a random value in an e-mail or SMS should be a last resort and is known weak
+	* Evaluation is based on [Testing for Vulnerable Remember Password (OTG-AUTHN-005)](https://www.owasp.org/index.php/Testing_for_Vulnerable_Remember_Password_(OTG-AUTHN-005))
+	* Evaluation is based on [Testing for weak password change or reset functionalities (OTG-AUTHN-009)](https://www.owasp.org/index.php/Testing_for_weak_password_change_or_reset_functionalities_(OTG-AUTHN-009))
+
 - [ ] V2.33: Browser autocomplete, and integration with password managers are permitted unless prohibited by risk based policy.
+	* Evaluation is based on [Testing for Browser cache weakness (OTG-AUTHN-006)](https://www.owasp.org/index.php/Testing_for_Browser_cache_weakness_(OTG-AUTHN-006))
 
 ## Session Management
 
@@ -110,8 +117,8 @@ For more information on auto-escaping, please see
 **TODO**
 
 
-- [ ] V5.3: Verify that server side input validation failures result in request rejection and are logged.
-- [ ] V5.13: Verify that the application is not susceptible to Remote File Inclusion (RFI) or Local File Inclusion (LFI) when content is used that is a path to a file.
+- [x] V5.3: Verify that server side input validation failures result in request rejection and are logged.
+- [x] V5.13: Verify that the application is not susceptible to Remote File Inclusion (RFI) or Local File Inclusion (LFI) when content is used that is a path to a file.
 
 ## Error Handling and Logging
 
@@ -141,7 +148,7 @@ and thus very attractive to attackers in their own right.
 
 **TODO**
 
-- [ ] V8.13: Time sources should be synchronized to ensure logs have the correct time 
+- [x] V8.13: Time sources should be synchronized to ensure logs have the correct time 
 
 ## Data protection
 
@@ -169,7 +176,7 @@ unauthorized attackers.
 
 **TODO**
 
-- [ ] V9.4: "Verify that the application sets appropriate anti-caching headers as per the risk of the application, such as the following:
+- [x] V9.4: "Verify that the application sets appropriate anti-caching headers as per the risk of the application, such as the following:
 Expires: Tue, 03 Jul 2001 06:00:00 GMT
 Last-Modified: {now} GMT
 Cache-Control: no-store, no-cache, must-revalidate, max-age=0 Cache-Control: post-check=0, pre-check=0
@@ -196,5 +203,5 @@ option specifically helps prevent Reflected File Download attacks.](https://www.
 
 **TODO**
 
-- [ ] V11.6: Verify that all API responses contain X-Content-Type-Options: nosniff and Content-Disposition: attachment; filename="api.json" (or other appropriate filename for the content type).
+- [x] V11.6: Verify that all API responses contain X-Content-Type-Options: nosniff and Content-Disposition: attachment; filename="api.json" (or other appropriate filename for the content type).
 
