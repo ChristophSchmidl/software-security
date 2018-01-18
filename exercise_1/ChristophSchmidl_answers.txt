@@ -1,0 +1,23 @@
+// Christoph Schmidl s4226887
+
+1. The main disadvantage of runtime checks is the additional overhead. 
+It is more time- and resource consuming to execute these checks and in certain
+scenarios not even feasible when the program has to go to long, nested loop
+structures. The other disadvantage is related to the before mentioned one because
+annotations are only checked when they are executed. That means that the whole
+program has to execute the entire codebase at runtime if you want to be sure 
+that it is valid input/output. 
+One advantage is that runtime checks are performing validation on actual, live 
+inputs/outputs and we are able to check for example for a type or size dynamically.
+
+2. PREfast cannot know about certain connections of parameters inside a function signature
+beforehand. Because of this, PREfast only complains after we have published these
+connections by adding annotations to it. PREfast had to make a wild guess which 
+parameter of a function would represent the length of a certain buffer which is 
+not acceptable behavior. Therefore the programm has to define these connections 
+explicitly. The default behaviour of PREfast is to not complain about 
+unannotated functions but only after certain annotation policies have been 
+violated. That makes sense to me because PREfast is most likely be used in sections
+of a big code base which is most vital and I guess most of the time PREfast is 
+introduced after the main code base has already been written. It might follow
+the rule of convention over configuration.
