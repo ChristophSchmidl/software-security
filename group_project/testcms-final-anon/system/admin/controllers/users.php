@@ -26,13 +26,13 @@ class Users_controller {
 	}
 	
 	public function amnesia() {
-		if(Input::method() == 'POST') {
-			if(Users::recover_password()) {
-				return Response::redirect($this->admin_url . '/users/login');
-			}
+	if(Input::method() == 'POST') {
+		if(Users::recover_password()) {
+			return Response::redirect($this->admin_url . '/users/login');
 		}
-		Template::render('users/amnesia');
 	}
+	Template::render('users/amnesia');
+}
 	
 	public function reset($hash) {
 		// find user
