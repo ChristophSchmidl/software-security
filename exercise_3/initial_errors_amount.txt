@@ -1,0 +1,35 @@
+cschmidl@hg075pc09:~/study/software_security/repo/exercise_3$ escjava2 Amount.java 
+ESC/Java version ESCJava-2.0.5
+    [0.017 s 31281080 bytes]
+
+Amount ...
+  Prover started:0.007 s 34870136 bytes
+    [0.243 s 34870136 bytes]
+
+Amount: Amount(int, int) ...
+    [0.018 s 35516344 bytes]  passed
+
+Amount: negate() ...
+    [0.01 s 36162608 bytes]  passed
+
+Amount: subtract(Amount) ...
+------------------------------------------------------------------------
+Amount.java:69: Warning: Possible null dereference (Null)
+   return this.add(a.negate());
+                    ^
+------------------------------------------------------------------------
+    [0.021 s 36808808 bytes]  failed
+
+Amount: add(Amount) ...
+------------------------------------------------------------------------
+Amount.java:73: Warning: Possible null dereference (Null)
+   int new_euros = euros + a.euros;
+                            ^
+------------------------------------------------------------------------
+    [0.021 s 37455032 bytes]  failed
+
+Amount: equal(Amount) ...
+    [0.006 s 37455032 bytes]  passed
+  [0.321 s 37455032 bytes total]
+2 warnings
+

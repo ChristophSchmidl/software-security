@@ -1,0 +1,189 @@
+cschmidl@hg075pc09:~/study/software_security/repo/exercise_3$ escjava2 Bag.java 
+ESC/Java version ESCJava-2.0.5
+    [0.017 s 31292792 bytes]
+
+Bag ...
+  Prover started:0.007 s 34254176 bytes
+    [0.245 s 34254176 bytes]
+
+Bag: Bag(int[]) ...
+------------------------------------------------------------------------
+Bag.java:39: Warning: Possible null dereference (Null)
+    n = input.length;
+             ^
+------------------------------------------------------------------------
+    [0.035 s 35549664 bytes]  failed
+
+Bag: Bag() ...
+    [0.013 s 36195888 bytes]  passed
+
+Bag: removeOnce(int) ...
+------------------------------------------------------------------------
+Bag.java:51: Warning: Possible null dereference (Null)
+      if (contents[i] == elt ) {
+                  ^
+Execution trace information:
+    Reached top of loop after 0 iterations in "Bag.java", line 50, col 4.
+
+------------------------------------------------------------------------
+Bag.java:51: Warning: Array index possibly too large (IndexTooBig)
+      if (contents[i] == elt ) {
+                  ^
+Execution trace information:
+    Reached top of loop after 0 iterations in "Bag.java", line 50, col 4.
+
+------------------------------------------------------------------------
+Bag.java:53: Warning: Possible negative array index (IndexNegative)
+         contents[i] = contents[n];
+                               ^
+Execution trace information:
+    Reached top of loop after 0 iterations in "Bag.java", line 50, col 4.
+    Executed then branch in "Bag.java", line 51, col 31.
+
+------------------------------------------------------------------------
+Bag.java:53: Warning: Array index possibly too large (IndexTooBig)
+         contents[i] = contents[n];
+                               ^
+Execution trace information:
+    Reached top of loop after 0 iterations in "Bag.java", line 50, col 4.
+    Executed then branch in "Bag.java", line 51, col 31.
+
+------------------------------------------------------------------------
+    [0.041 s 37562016 bytes]  failed
+
+Bag: removeAll(int) ...
+------------------------------------------------------------------------
+Bag.java:61: Warning: Possible null dereference (Null)
+      if (contents[i] == elt ) {
+                  ^
+Execution trace information:
+    Reached top of loop after 0 iterations in "Bag.java", line 60, col 4.
+
+------------------------------------------------------------------------
+Bag.java:61: Warning: Array index possibly too large (IndexTooBig)
+      if (contents[i] == elt ) {
+                  ^
+Execution trace information:
+    Reached top of loop after 0 iterations in "Bag.java", line 60, col 4.
+
+------------------------------------------------------------------------
+Bag.java:63: Warning: Possible negative array index (IndexNegative)
+         contents[i] = contents[n];
+                               ^
+Execution trace information:
+    Reached top of loop after 0 iterations in "Bag.java", line 60, col 4.
+    Executed then branch in "Bag.java", line 61, col 31.
+
+------------------------------------------------------------------------
+Bag.java:63: Warning: Array index possibly too large (IndexTooBig)
+         contents[i] = contents[n];
+                               ^
+Execution trace information:
+    Reached top of loop after 0 iterations in "Bag.java", line 60, col 4.
+    Executed then branch in "Bag.java", line 61, col 31.
+
+------------------------------------------------------------------------
+    [0.032 s 38208240 bytes]  failed
+
+Bag: getCount(int) ...
+------------------------------------------------------------------------
+Bag.java:71: Warning: Possible null dereference (Null)
+      if (contents[i] == elt) count++; 
+                  ^
+Execution trace information:
+    Reached top of loop after 0 iterations in "Bag.java", line 70, col 4.
+
+------------------------------------------------------------------------
+Bag.java:71: Warning: Array index possibly too large (IndexTooBig)
+      if (contents[i] == elt) count++; 
+                  ^
+Execution trace information:
+    Reached top of loop after 0 iterations in "Bag.java", line 70, col 4.
+
+------------------------------------------------------------------------
+    [0.016 s 38854520 bytes]  failed
+
+Bag: add(int) ...
+------------------------------------------------------------------------
+Bag.java:82: Warning: Possible null dereference (Null)
+    if (n == contents.length) {
+                     ^
+------------------------------------------------------------------------
+Bag.java:87: Warning: Possible negative array index (IndexNegative)
+    contents[n]=elt;
+            ^
+Execution trace information:
+    Executed else branch in "Bag.java", line 82, col 4.
+
+------------------------------------------------------------------------
+Bag.java:87: Warning: Array index possibly too large (IndexTooBig)
+    contents[n]=elt;
+            ^
+Execution trace information:
+    Executed then branch in "Bag.java", line 82, col 30.
+
+------------------------------------------------------------------------
+    [0.021 s 40147664 bytes]  failed
+
+Bag: add(Bag) ...
+------------------------------------------------------------------------
+Bag.java:92: Warning: Possible null dereference (Null)
+    int[] new_contents = new int[n + b.n];
+                                      ^
+------------------------------------------------------------------------
+Bag.java:92: Warning: Possible attempt to allocate array of negative length (NegSize)
+    int[] new_contents = new int[n + b.n];
+                                ^
+------------------------------------------------------------------------
+    [0.021 s 40793872 bytes]  failed
+
+Bag: add(int[]) ...
+    [0.007 s 40793872 bytes]  passed
+
+Bag: arraycopy(int[], int, int[], int, int) ...
+------------------------------------------------------------------------
+Bag.java:115: Warning: Possible null dereference (Null)
+       dest[destOff+i] = src[srcOff+i];
+                            ^
+Execution trace information:
+    Reached top of loop after 0 iterations in "Bag.java", line 114, col 4.
+
+------------------------------------------------------------------------
+Bag.java:115: Warning: Possible negative array index (IndexNegative)
+       dest[destOff+i] = src[srcOff+i];
+                            ^
+Execution trace information:
+    Reached top of loop after 0 iterations in "Bag.java", line 114, col 4.
+
+------------------------------------------------------------------------
+Bag.java:115: Warning: Array index possibly too large (IndexTooBig)
+       dest[destOff+i] = src[srcOff+i];
+                            ^
+Execution trace information:
+    Reached top of loop after 0 iterations in "Bag.java", line 114, col 4.
+
+------------------------------------------------------------------------
+Bag.java:115: Warning: Possible null dereference (Null)
+       dest[destOff+i] = src[srcOff+i];
+           ^
+Execution trace information:
+    Reached top of loop after 0 iterations in "Bag.java", line 114, col 4.
+
+------------------------------------------------------------------------
+Bag.java:115: Warning: Possible negative array index (IndexNegative)
+       dest[destOff+i] = src[srcOff+i];
+           ^
+Execution trace information:
+    Reached top of loop after 0 iterations in "Bag.java", line 114, col 4.
+
+------------------------------------------------------------------------
+Bag.java:115: Warning: Array index possibly too large (IndexTooBig)
+       dest[destOff+i] = src[srcOff+i];
+           ^
+Execution trace information:
+    Reached top of loop after 0 iterations in "Bag.java", line 114, col 4.
+
+------------------------------------------------------------------------
+    [0.025 s 42086352 bytes]  failed
+  [0.457 s 42086352 bytes total]
+22 warnings
