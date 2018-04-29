@@ -160,8 +160,13 @@
 	* [Sections 30.3 & 30.4 (on pages 645-656) of Low-level Software Security by Example by Ulfar Erlingsson et al.](../literature/low-level-security-by-example.pdf)
 		* **Defenses that Preserve High-Level Language Properties**
 			* **Defense 1: Checking Stack Canaries on Return Addresses**
+				* Protection against Corruption of a Function Return Address on the Stack
 			* **Defense 2: Making Data not Executable as Machine Code**
+				* Non-executable data defends against direct code injection attacks, but offers no barrier to exploits such as indirect code injection, jump-to-libc attacks and data only attacks
 			* **Defense 3: Enforcing Control-Flow Integrity on Code Execution**
+				* The runtime enforcement of such a **control-flow integrity (CFI)** security policy is a highly effective defense against low-level software attacks
+				* One efficient CFI enforcement mechanism (Control-Flow-Graph - CFG), describes both the source and destination instructions of computed control-flow transfers.
+				* The CFI security policy dictates that software execution must follow a path of a control-flow graph, determined ahead of time, that represents all possible valid executions of the software 
 			* **Defense 4: Randomizing the Layout of Code and Data in Memory**
 
 	* Sections 3.1 & 3.2 of the lecture notes
