@@ -242,6 +242,16 @@
 
 * Literature:
 	* [Collaborative Verification of Information Flow for a High-Assurance App Store](../literature/Collaborative_Verification_of_Information_Flow_for_a_High-Assurance_App_Store.pdf)
+		* The author propose a verification model for app stores in order to assure that the apps are free of malicious code
+		* Two parties involved: **The software vendor** and **the app store auditor** collaborate
+		* The software vendor provides a behavioral specification of information flow and source code annoated with information-flow type qualifiers. A flow-sensitive, context-sensitive information-flow type system checks the information flow type qualifiers
+		* The app store auditor uses the vendor-provided source code to manually verify declassifications
+		* Tailored towards Android Apps written in Java
+		* 4 factors in current app stores which make it hard to detect trojans
+			* 1. Existing analysis tools require error-prone human effort
+			* 2. The vendor provides only a very coarse description of application behavior in the form of permissions it will access (manifest)
+			* 3. The binary executable lacks much semantic information that is available in source code
+			* 4. The vendor has little motivation to make the application easy for the app store to analyze and understand
 
 
 ### Lecture 11 - Security Testing & Fuzzing - Dec 1
