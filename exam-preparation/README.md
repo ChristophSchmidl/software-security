@@ -7,7 +7,7 @@
 * Buffer overflows
 	* Spot a simple buffer overflow. Explain how buffer overflows work, and explain some cause for them.
 
-	* Explain/discuss any of the countermeasures against buffer overflows, (canaries, non-executable data segments, ASLR, CFI, execution-aware memory protection),
+	* Explain/discuss any of the countermeasures against buffer overflows, (**canaries, non-executable data segments, ASLR, CFI, execution-aware memory protection**),
 	  incl. static analysis of SAL-annoted code with
 	  PREfast and sample coding guidelines for C(++) on constructs to
 	  avoid.  (BUT NOT pointer encryption, as that technique was not 
@@ -23,22 +23,22 @@
 
 * Similar for other security flaws: Explain what 
 
-	* format string attack,
-	* integer overflow
-	* command injection
-	* PHP injection 
-	* SQL injection (normal, blind or 2nd order )
-	* XSS
-	* CSRF
-	* TOCTOU aka race conditions
+	* **format string attack**,
+	* **integer overflow**
+	* **command injection**
+	* **PHP injection**
+	* **SQL injection (normal, blind or 2nd order )**
+	* **XSS**
+	* **CSRF**
+	* **TOCTOU aka race conditions**
 	* more generally: (lack of) input validation, output validation 
       is; spot/explain them in simple examples; explain/discuss 
       the countermeasures against them.
 
-* Explain the notion of TCB (Trusted Computing Base) or 
+* Explain the notion of **TCB (Trusted Computing Base)** or 
   say what the TCB is in a given scenario.
 
-* Comment on (some aspects of using) the ASVS.
+* Comment on (some aspects of using) the **ASVS**.
 
 * Language-based Security
 
@@ -102,8 +102,8 @@
 
 	* Explain what a test oracle is, what fuzzing is & how it works.
   
-	* Explain what mutation-based fuzzing, generational fuzzing whitebox
-	  fuzzing using symbolic execution, and evolutionary fuzzing are.
+	* Explain what **mutation-based fuzzing**, **generational fuzzing whitebox
+	  fuzzing using symbolic execution**, and **evolutionary fuzzing** are.
 	  Explain advantages and limitations of these approaches, and pros &
 	  cons of and between the variants.
 
