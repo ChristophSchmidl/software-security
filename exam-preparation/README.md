@@ -168,6 +168,11 @@
 				* One efficient CFI enforcement mechanism (Control-Flow-Graph - CFG), describes both the source and destination instructions of computed control-flow transfers.
 				* The CFI security policy dictates that software execution must follow a path of a control-flow graph, determined ahead of time, that represents all possible valid executions of the software 
 			* **Defense 4: Randomizing the Layout of Code and Data in Memory**
+				* Address-Space Layout Randomization
+				* ASLR defenses can be used to change the addresses of all code, global variables, stack variables, arrays, and structures, objects, and heap allocations; with ASLR those addresses are derived from a random value, chosen for the software being executed and the system on which it executes.
+				* Once an attacker is able to execute even the smallest amount of code of their choice (e.g., in a jump-to-libc attack), it should be safely assumed that the attacker can read memory and, in particular, that ASLR is no longer an obstacle.
+				* At least on 32-bit systems, the number of possible ASLR shuffles is insufficient to provide a defense against scenarios where the attacker is able to retry their attack repeatedly, with new addresses
+				* Countermeasure: Format-string attacks
 
 	* Sections 3.1 & 3.2 of the lecture notes
 	* [Arstechnica article on BlueBorne bluetooth security bug](https://arstechnica.com/information-technology/2017/09/bluetooth-bugs-open-billions-of-devices-to-attacks-no-clicking-required/)
