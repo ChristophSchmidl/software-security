@@ -277,6 +277,16 @@
 
 * Literature:
 	* [SAGE: whitebox fuzzing for security testing](http://queue.acm.org/detail.cfm?id=2094081)
+		* Today, hackers find security vulnerabilities in software products using two primary methods. **Code inspection of binaries** and **Blackbox Fuzzing**
+		* **Blackbox Fuzzing** is a form of blackbox random testing which randomly mutates well-formed program inputs and then tests the program with those modified inputs hoping to trigger a bug such as a buffer overflow. In some cases, **grammars** are used to generate the well-formed inputs
+		* Blackbox fuzzing usually provides low code coverage and can muss security bugs
+		* **SAGE: Scalable Automated Guided Execution** is an implementation of Whitebox fuzzing by Microsoft
+		* Whitebox fuzzing starts with a well-formed input and consists of **symbolically executing** the program under test dynamically, **gathering constraints** on inputs from conditional branches encountered along the execution. The collected constraints are then systematically negated and solved with a **constraint solver**, whose solutions are mapped to new inputs that exercise different program execution paths. This process is repeated using novel search techniques that attempt to sweep through all (in practice, many) feasible execution paths of the program while checking many properties simultaneously using a **runtime checker** 
+		* In theory, **systematic dynamic test generation** can lead to **full program path coverage, i.e., program verification**.
+		* SAGE performs dynamic symbolic execution
+		* Because SAGE is typically run last, those bugs were missed by everything else, including static program analysis and blackbox fuzzing.
+		* When to use blackbox or whitebox fuzzing? Blackbox is simple, lightweight, easy, and fast but can yield limited code coverage. Whitebox is smarter but more complex. Just use both.
+
 	* [The Apple goto fail vulnerability: lessons learned](http://www.dwheeler.com/essays/apple-goto-fail.html)
 		* The Apple “goto fail” vulnerability refers to a security update on 2014-02-21 by apple for its implementation of SSL/TLS. The vulnerability is formally named CVE-2014-1266
 		* The problem was the second (duplicate) “goto fail”. The indentation here is misleading; since there are no curly braces after the “if” statement, the second “goto fail” is always executed. In context, that meant that vital signature checking code was skipped, so both bad and good signatures would be accepted. The extraneous “goto” caused the function to return 0 (“no error”) when the rest of the checking was skipped; as a result, invalid certificates were quietly accepted as valid.
