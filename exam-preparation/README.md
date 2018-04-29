@@ -21,124 +21,123 @@
 	  produce syntactically correct SAL annotations; you just have to 
 	  explain the essence of what annotations would say).
 
-- Similar for other security flaws: Explain what 
-   - format string attack,
-   - integer overflow
-   - command injection
-   - PHP injection 
-   - SQL injection (normal, blind or 2nd order )
-   - XSS
-   - CSRF
-   - TOCTOU aka race conditions
-   - more generally: (lack of) input validation, output validation
-  is; spot/explain them in simple examples; explain/discuss 
-  the countermeasures against them.
+* Similar for other security flaws: Explain what 
 
-- Explain the notion of TCB (Trusted Computing Base) or 
+	* format string attack,
+	* integer overflow
+	* command injection
+	* PHP injection 
+	* SQL injection (normal, blind or 2nd order )
+	* XSS
+	* CSRF
+	* TOCTOU aka race conditions
+	* more generally: (lack of) input validation, output validation 
+      is; spot/explain them in simple examples; explain/discuss 
+      the countermeasures against them.
+
+* Explain the notion of TCB (Trusted Computing Base) or 
   say what the TCB is in a given scenario.
 
-- Comment on (some aspects of using) the ASVS.
+* Comment on (some aspects of using) the ASVS.
 
-- Language-based Security
+* Language-based Security
 
-  Explain/discuss/motivate the security guarantees a "safe" language like
-  Java or C# can make, such as
-   - memory safety
-   - type safety
-   - code-based access control/sandboxing
-  using typing, byte-code verification, visibility, stack walking, etc.
+	* Explain/discuss/motivate the security guarantees a "safe" language like
+      Java or C# can make, such as
+	* memory safety
+	* type safety
+	* code-based access control/sandboxing
+      using typing, byte-code verification, visibility, stack walking, etc.
 
-  Explain how/why these guarantees can be useful.  
+	* Explain how/why these guarantees can be useful.  
 
-  For a piece of Java code that code-based access control, say whether 
-  the stackwalking algorithm will throw exceptions due to missing
-  permissions or not for the stacks that this code produces, and 
-  be able to motivate why.
+	* For a piece of Java code that code-based access control, say whether 
+	  the stackwalking algorithm will throw exceptions due to missing
+	  permissions or not for the stacks that this code produces, and 
+	  be able to motivate why.
 
-  Explain the notions of memory-safety, type-safety, stackwalking.  
-  Explain/motivate some of the coding guidelines for Java.  
-  Explain some example problems in Java security discussed in lecture
-  slides.
+	* Explain the notions of memory-safety, type-safety, stackwalking.  
 
-  Explain why immutability of data can be important for security.
+	* Explain/motivate some of the coding guidelines for Java.  
 
-- Explain/compare/discuss possibilities, limitations, pros and cons
+	* Explain some example problems in Java security discussed in lecture
+	  slides.
+
+	* Explain why immutability of data can be important for security.
+
+* Explain/compare/discuss possibilities, limitations, pros and cons
   of any of the techniques treated in the course (various forms of typing,
   coding guidelines, static analysis, program verification, etc.) or 
   of any of the tools we used in the projects (PREfast, RIPS, ESC/Java.)
   Say something intelligent about the use of such tools.
 
-- Information Flow
+* Information Flow
 
-  Explain what information flow is, formally or informally, what
-  without implicit and explicit flows are, what termination-senstivity is.
+	* Explain what information flow is, formally or informally, what
+	  without implicit and explicit flows are, what termination-senstivity is.
 
-  Spot information flow problems in simple examples.
+	* Spot information flow problems in simple examples.
 
-  Explain/motivate/give some of the typing rules for information flow,
-  for termination/timing-sensitive or insensitive versions.
+	* Explain/motivate/give some of the typing rules for information flow,
+	  for termination/timing-sensitive or insensitive versions.
 
-  Explain/motivate/give the formal definition of non-interference,
-  for termination/timing-sensitive or insenstive versions.
+	* Explain/motivate/give the formal definition of non-interference,
+	  for termination/timing-sensitive or insenstive versions.
 
-  NB I expect you to be able to produce the definition of non-interference
-  and to come up with typing rules for information flows as discussed
-  in the lecture notes. (Once you understand the ideas behind the definition
-  and these rules you should be able to reproduce them.)
+	* NB I expect you to be able to produce the definition of non-interference
+	  and to come up with typing rules for information flows as discussed
+	  in the lecture notes. (Once you understand the ideas behind the definition
+	  and these rules you should be able to reproduce them.)
 
-  Explain/comment on the way that static analysis tools like RIPS
-  and PREfast do information flow for unvalidated inputs (aka
-  tainting).
+	* Explain/comment on the way that static analysis tools like RIPS
+	  and PREfast do information flow for unvalidated inputs (aka
+	  tainting).
+
+	* Explain/motivate the idea behind the SPARTA system & approach, how
+	  it works, what the limitations are, and how the approach copes with
+	  implicit flows. Explain which parts of the SPARTA validation scheme
+	  are manual and which are automated.
+
+* Security Testing and Fuzzing
+
+	* Explain what a test oracle is, what fuzzing is & how it works.
   
-  Explain/motivate the idea behind the SPARTA system & approach, how
-  it works, what the limitations are, and how the approach copes with
-  implicit flows. Explain which parts of the SPARTA validation scheme
-  are manual and which are automated.
+	* Explain what mutation-based fuzzing, generational fuzzing whitebox
+	  fuzzing using symbolic execution, and evolutionary fuzzing are.
+	  Explain advantages and limitations of these approaches, and pros &
+	  cons of and between the variants.
 
-- Security Testing and Fuzzing
+	* David Wheeler's Apple iOS goto bug paper: given some claim about
+	  about how this (type of) bug could be prevented, argue for or
+	  against this claim.
 
-  Explain what a test oracle is, what fuzzing is & how it works.
-  
-  Explain what mutation-based fuzzing, generational fuzzing whitebox
-  fuzzing using symbolic execution, and evolutionary fuzzing are.
-  Explain advantages and limitations of these approaches, and pros &
-  cons of and between the variants.
+* Code obfuscation
 
-- David Wheeler's Apple iOS goto bug paper: given some claim about
-  about how this (type of) bug could be prevented, argue for or
-  against this claim.
+	* You do NOT have to memorise these obfuscations technology, or
+	  to be able to reproduce how they work. Given a description
+	  of one of these techniques, you should to be able explain what 
+	  the idea behind this (ie. why is this obfuscation? though that
+	  should be pretty obvious) and why you might want apply such
+	  techniques.
 
-- Code obfuscation
+* LangSec and state machine testing
 
-  You do NOT have to memorise these obfuscations technology, or
-  to be able to reproduce how they work. Given a description
-  of one of these techniques, you should to be able explain what 
-  the idea behind this (ie. why is this obfuscation? though that
-  should be pretty obvious) and why you might want apply such
-  techniques.
+	* For the principles that LangSec advocates, explain what these
+      principles mean and explain the motivation behind them.  Similarly
+      for the practices that LangSec abhors.
 
-- LangSec and state machine testing
+	* Explain what model based testing is, and how state machine
+      learning can be used to reverse engineer applications and find
+      potential security flaws
 
-  - For the principles that LangSec advocates, explain what these
-    principles mean and explain the motivation behind them.  Similarly
-    for the practices that LangSec abhors.
+**FOR PEOPLE DOING THE 6 EC VARIANT:**
 
-  - Explain what model based testing is, and how state machine
-    learning can be used to reverse engineer applications and find
-    potential security flaws
+* Program Verification
 
-FOR PEOPLE DOING THE 6 EC VARIANT:
-
-- Program Verification
-
-  Explain how & why one might use program verification.
-  Explain/apply basic JML annotations as used in the ESC/Java assignment.
-  Discuss pros and cons of these techniques.
-
-  Have another look at the JML exercises.
-
-
-
+	* Explain how & why one might use program verification.
+	* Explain/apply basic JML annotations as used in the ESC/Java assignment.
+	* Discuss pros and cons of these techniques.
+	* Have another look at the JML exercises.
 
 
 
