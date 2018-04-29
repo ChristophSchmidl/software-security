@@ -100,7 +100,7 @@
 
 * Security Testing and Fuzzing
 
-	* Explain what a test oracle is, what fuzzing is & how it works.
+	* Explain what a **test oracle** is, what fuzzing is & how it works.
   
 	* Explain what **mutation-based fuzzing**, **generational fuzzing whitebox
 	  fuzzing using symbolic execution**, and **evolutionary fuzzing** are.
@@ -209,6 +209,11 @@
 
 * Literature:
 	* [Statically Scanning Java Code: Finding Security Vulnerabilities](../literature/Statically_Scanning_Java_Code.pdf)
+		* Authors present a Static Code Analysis Tool for Java called JsLint
+		* The goal is to minimize the unfortunately pervasive "penetrate and patch" approach
+		* 12 Rules for More Secure Java Code
+			* 1. Don't Depend on Initialization
+			* 2. Limit Access to Your Classes, Methods, and Variables
 
 
 
