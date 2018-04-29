@@ -191,6 +191,11 @@
 
 * Literature:
 	* [Wyvern: Impacting Software Security via Programming Language Design](../literature/Wyvern_Impacting_Software_Security_via_Programming_Language_Design.pdf)
+		* Some people argue that system safety and security is a completely programming language agnostic topic. The authors of the paper disagree with this opinion and say that programming language design can have direct influence on the security of software systems. They defend this opinion by showcasing their programming language "Wyvern" (web programming language) in the context of command injections/SQL Injections.
+		* Wyvern incorporates SQL as part of its language and gives the developer an easy and secure way to write SQL queries in contrast to just using Strings in other programming languages. The authors state that the biggest hurdle in writing secure applications is the ease of use. It is easier to just write some SQL queries as Strings in comparison to construct secure Prepared Statements.
+		* Wyvern is using some common principles like: secure defaults, principle of least privilege, keeping security simple, using open design
+		* Simple idea which just describes the known fact that most developers write insecure code because they are lazy. If the programming language provides a way to get stuff done as easy as possible while being secure than that's one solution for sure.
+
 
 
 ### Lecture 7 - Sandboxing - Oct 20
