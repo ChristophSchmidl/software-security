@@ -158,9 +158,18 @@
 
 * Literature:
 	* [Sections 30.3 & 30.4 (on pages 645-656) of Low-level Software Security by Example by Ulfar Erlingsson et al.](../literature/low-level-security-by-example.pdf)
+		* **Defenses that Preserve High-Level Language Properties**
+			* **Defense 1: Checking Stack Canaries on Return Addresses**
+			* **Defense 2: Making Data not Executable as Machine Code**
+			* **Defense 3: Enforcing Control-Flow Integrity on Code Execution**
+			* **Defense 4: Randomizing the Layout of Code and Data in Memory**
+
 	* Sections 3.1 & 3.2 of the lecture notes
 	* [Arstechnica article on BlueBorne bluetooth security bug](https://arstechnica.com/information-technology/2017/09/bluetooth-bugs-open-billions-of-devices-to-attacks-no-clicking-required/)
-
+		* Just by having Bluetooth on the attacker can carry out remote code-execution attacks on both Linux and Android
+		* The attack is most potent against Android and Linux devices, because the Bluetooth implementations in both operating systems are vulnerable to memory corruption exploits that execute virtually any code of the hacker's choosing. The Bluetooth functionality in both OSes also runs with high system privileges, allowing the resulting infection to access sensitive system resources and survive multiple reboots.
+		* Surprisingly, the majority of Linux devices on the market today don't use **address space layout randomization** or similar protections to lessen the damage of BlueBorne's underlying **buffer overflow** exploit, Armis Head of Research Ben Seri said. That makes the code-execution attack on that OS "highly reliable." 
+		* **Android, by contrast, does use ASLR**, but Armis was able to bypass the protection by exploiting a separate vulnerability in the Android implementation of Bluetooth that **leaks memory locations** where key processes are running.
 
 ### Lecture 3 - More buffer overflow countermeasures and Static Analysis with PREfast & SAL - Sept 22
 
