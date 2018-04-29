@@ -261,6 +261,17 @@
 			* The programmed writes **Java type annotations** to express information-flow type qualifiers. For example: @Source(Location) @Sink(INTERNET) double loc;
 		* The arguments to @Source and @Sink are permissions drawn from the enriched permission system
 		* ![Partial Qualifier Hierarchy](../images/partial_qualifier_hierarchy.PNG)
+		* Polymorphism: List<@Source(CONTACTS) @Sink(WRITE_SMS) String> myList; or @PolySource int f(@PolySource int x)
+		* **The flow policy specifies what types are legal**
+		* Off-device sinks must be either trusted or verified by other means
+		* Each local variable declaration (also casts and resource variables) defaults to the top type qualifiers @Source(ANY) @Sink({})
+		* If a type is annotated with only a source or only a sink, the other qualifier is filled in with the most general value that is consistent with the flow policy
+		* Most unannotated types (including field types, return types, generic type arguments, and non-null literals) are given the qualifier @Source(LITERAL). This is so that a simple computation involving only constants does not require annotations.
+		* Classification and Declassification (Example, database queries can return sensitive data)
+		* Implicit information flow can leak sensitive data (credit card example)
+		* Red Team Evaluation
+		* IFT cannot detect malware not related to information flow (yet)
+		* 
 
 
 ### Lecture 11 - Security Testing & Fuzzing - Dec 1
