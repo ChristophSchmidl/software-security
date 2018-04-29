@@ -271,7 +271,6 @@
 		* Implicit information flow can leak sensitive data (credit card example)
 		* Red Team Evaluation
 		* IFT cannot detect malware not related to information flow (yet)
-		* 
 
 
 ### Lecture 11 - Security Testing & Fuzzing - Dec 1
@@ -279,6 +278,20 @@
 * Literature:
 	* [SAGE: whitebox fuzzing for security testing](http://queue.acm.org/detail.cfm?id=2094081)
 	* [The Apple goto fail vulnerability: lessons learned](http://www.dwheeler.com/essays/apple-goto-fail.html)
+		* The Apple “goto fail” vulnerability refers to a security update on 2014-02-21 by apple for its implementation of SSL/TLS. The vulnerability is formally named CVE-2014-1266
+		* The problem was the second (duplicate) “goto fail”. The indentation here is misleading; since there are no curly braces after the “if” statement, the second “goto fail” is always executed. In context, that meant that vital signature checking code was skipped, so both bad and good signatures would be accepted. The extraneous “goto” caused the function to return 0 (“no error”) when the rest of the checking was skipped; as a result, invalid certificates were quietly accepted as valid.
+		* This vulnerability introduced man-in-the-middle attacks
+		* The vulnerability could have been introduced by accident, by a wrong merge or on purpose in order to sell it as a zero-day exploit
+		* Some people blame the goto statement itself for this but based on prior studies, goto actually improved C code when it was used in a reasonable manner
+		* **Countermeasure 1: Negative testing in test cases (dynamic analysis)**. Writing tests which should fail and not solely rely on tests which succeed all the time. For example, writing tests with certificates which should get rejected.
+		* **Countermeasure 2: Properly detect and check unreachable code, e.g., via warning flags (static analysis)**. There is also a problem with a certain version with gcc that it no longer gives warnings about unreachable code although the flag is enabled. Therefore developers should use multiple analysis tools.
+		* **Countermeasure 3: Always use braces, at least if it’s not the same line (static analysis)**. There are different coding guidelines to this. You do not have to use curly braces for if statements all the time but it seems good practice to do so.
+		* **Countermeasure 4: Use coverage analysis (dynamic analysis)**. If you [are considering applying] statement coverage, [reaching] 100% is the minimal objective. Statement coverage can be useful for detecting ‘dead code’, i.e. code that cannot be executed at all. Statement coverage can [also] reveal missing test cases.
+		* **Countermeasure 5: Forbid misleading indentation (static analysis)**.
+		* **Countermeasure 6: Detect duplicate lines in source code (static analysis)**
+		* **Countermeasure 7: Change error-handling idiom or switch to a safer language to use exceptions (static analysis)**. The authors propose using specialized C macros that make the idiom much easier to apply.
+		* **Countermeasure 8: Make access failure the default (static analysis)**. An overlooked basic problem of the 'goto fail' code was the assumption of success until failure was proven. If failure was assumed until success was proven, the bug would not have existed.
+		* **Countermeasure 9: Manual review (static analysis)**
 
 
 ### Lecture 12 - Program Verification & Guest lecture by Wil Michiels (NXP/TUE) on Obfuscation - Dec 8
