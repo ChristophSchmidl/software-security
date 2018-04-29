@@ -168,6 +168,10 @@
 		* Code level: Static analysis tools and later on penetration testing
 
 	* [Software Security in Practice by Brian Chess & Brad Arkin](../literature/Software_Security_in_Practice_-_Brian_Chess_and_Brad_Arkin.pdf)
+		* Security must be part of software development
+		* **SDL**: Microsoft's Security Development Lifecycle
+		* **SPLC**: Adobe's Secure Product Lifecycle
+		* **BSIMM**: Building Security In Maturity Model
 
 
 ### Lecture 2 - Buffer overflows & platform-level countermeasures - Sept 15
