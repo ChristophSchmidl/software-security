@@ -168,6 +168,10 @@
 * Literature:
 	* [C++ example used in PREfast demo](https://www.cs.ru.nl/E.Poll/ss/simple_demo_prefast.cpp)
 	* [Video demo of static analysis in Visual Studio](https://www.youtube.com/watch?v=LW0GBbbjwLI)
+		* Microsoft Security Development Lifecycle (see: www.microsoft.com/sdl)
+		* Besides the ability of Static Analysis Tools to spot security vulnerabilities, they can also provide a just-in-time learning experience for the developer as he learns about bugs while he writes his code.
+		* The narrator goes to a C/C++ code fragment and points out that although Visual Studio is set to the highest warning level (4) when building, the actual security flaws are not spotted by Visual Studio. After enabling (static) code analysis a whole bunch of flaws pop up.
+		* They talk about the fact that security flaws while using custom functions are not spotted right out of the box. In order to give the static analysis tool information about custom functions and its contract, the Standard Annotation Language (SAL) is used (see FillString function).
 
 
 ### Lecture 4 - Language-based Security: 'Safe' programming languages - Sept 29
