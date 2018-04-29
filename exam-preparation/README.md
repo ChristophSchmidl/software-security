@@ -214,6 +214,16 @@
 		* 12 Rules for More Secure Java Code
 			* 1. Don't Depend on Initialization
 			* 2. Limit Access to Your Classes, Methods, and Variables
+			* 3. Make Everything Final by Default, Unless There Is a Good Reason Not to Do So
+			* 4. Don't Depend on Package Scope
+			* 5. Do Not Use Inner Classes
+			* 6. Avoid Signing Your Code (Minimize the Amount of privilged Code)
+			* 7. If You Must Sign Your Code, Put it All in One Archive File
+			* 8. Make Your Classes Uncloneable
+			* 9. Make Your Classes Unserializeable
+			* 10. Make Your Classes Undeserializeable
+			* 11. Don't Compare Classes by Name
+			* 12. Secrets Stored in Your Code Won't Protect You
 
 
 
