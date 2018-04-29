@@ -101,6 +101,15 @@
 * Security Testing and Fuzzing
 
 	* Explain what a **test oracle** is, what fuzzing is & how it works.
+		* A test oracle is a source of information about whether the output of a program (or function or method) is correct or not.
+		* A test oracle might specify correct output for all possible input or only for specific input. It might not specify actual output values but only constraints on them. The oracle might be:
+			* a program (separate from the system under test) which takes the same input and produces the same output
+			* documentation that gives specific correct outputs for specific given inputs
+			* a documented algorithm that a human could use to calculate correct outputs for given inputs
+			* a human domain expert who can somehow look at the output and tell whether it is correct
+			* or any other way of telling that output is correct.
+		* Fuzzing or fuzz testing is an automated software testing technique that involves providing invalid, unexpected, or random data as inputs to a computer program. The program is then monitored for exceptions such as crashes, or failing built-in code assertions or for finding potential memory leaks. Typically, fuzzers are used to test programs that take structured inputs. This structure is specified, e.g., in a file format or protocol and distinguishes valid from invalid input.
+
   
 	* Explain what **mutation-based fuzzing**, **generational fuzzing whitebox
 	  fuzzing using symbolic execution**, and **evolutionary fuzzing** are.
