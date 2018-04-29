@@ -215,12 +215,12 @@
 			* A **JVM flaw** might allow a malicious Java program to breach the JVM's security enforcement: **Securing the Java platform can prevent this**
 			* The user might mistakenly grant powerful privileges to code that turns out to be malicious: **A user's good judgement can prevent this** 
 			* The user might grant powerful privileges to code that is well intentioned but contains bugs that other malicious code can exploit: **JsLint can help here**
-		* 12 Rules for More Secure Java Code
+		* 12 Rules for More Secure Java Code (**JsLint checks for violations of these rules**)
 			* 1. Don't Depend on Initialization
 			* 2. Limit Access to Your Classes, Methods, and Variables
 			* 3. Make Everything Final by Default, Unless There Is a Good Reason Not to Do So
 			* 4. Don't Depend on Package Scope
-			* 5. Do Not Use Inner Classes
+			* 5. Do Not Use Inner Classes (Java byte code has no concept of inner classes)
 			* 6. Avoid Signing Your Code (Minimize the Amount of privilged Code)
 			* 7. If You Must Sign Your Code, Put it All in One Archive File
 			* 8. Make Your Classes Uncloneable
@@ -228,6 +228,7 @@
 			* 10. Make Your Classes Undeserializeable
 			* 11. Don't Compare Classes by Name
 			* 12. Secrets Stored in Your Code Won't Protect You
+		* JsLint parses the source file into a syntax tree and then uses the visitor pattern to traverse the syntax tree looking for vulnerabilities	
 
 
 
