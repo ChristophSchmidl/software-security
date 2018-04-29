@@ -211,6 +211,10 @@
 	* [Statically Scanning Java Code: Finding Security Vulnerabilities](../literature/Statically_Scanning_Java_Code.pdf)
 		* Authors present a Static Code Analysis Tool for Java called JsLint
 		* The goal is to minimize the unfortunately pervasive "penetrate and patch" approach
+		* Implementations of the Java Platform expose a user to 3 classes of risks:
+			* A **JVM flaw** might allow a malicious Java program to breach the JVM's security enforcement: **Securing the Java platform can prevent this**
+			* The user might mistakenly grant powerful privileges to code that turns out to be malicious: **A user's good judgement can prevent this** 
+			* The user might grant powerful privileges to code that is well intentioned but contains bugs that other malicious code can exploit: **JsLint can help here**
 		* 12 Rules for More Secure Java Code
 			* 1. Don't Depend on Initialization
 			* 2. Limit Access to Your Classes, Methods, and Variables
