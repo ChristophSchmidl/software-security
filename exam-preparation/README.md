@@ -150,6 +150,14 @@
 
 * Literature:
 	* [Software Security by Gary McGraw](../literature/Software_Security_-_Gary_McGraw.pdf)
+		* On one hand, **software security** is about building secure software
+		* On the other hand, **application security** is about protecting software and the systems that software runs in a post facto way, after development is complete
+		* It would make more sense to build secure software in the first place which makes application security obsolete
+		* **Software Security** is about helping builders do a better job so that operators end up with an easier job
+		* Software Security should be part of the development process early on and not a thing procrastinated to the very end
+		* Requirements level: Write abuse cases
+		* Code level: Static analysis tools and later on penetration testing
+
 	* [Software Security in Practice by Brian Chess & Brad Arkin](../literature/Software_Security_in_Practice_-_Brian_Chess_and_Brad_Arkin.pdf)
 
 
