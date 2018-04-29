@@ -244,7 +244,7 @@
 	* [Collaborative Verification of Information Flow for a High-Assurance App Store](../literature/Collaborative_Verification_of_Information_Flow_for_a_High-Assurance_App_Store.pdf)
 		* The author propose a verification model for app stores in order to assure that the apps are free of malicious code
 		* Two parties involved: **The software vendor** and **the app store auditor** collaborate
-		* The software vendor provides a behavioral specification of information flow and source code annoated with information-flow type qualifiers. A flow-sensitive, context-sensitive information-flow type system checks the information flow type qualifiers (IFT - Information Flow Type-Checker)
+		* The software vendor provides a behavioral specification of information flow and source code annotated with information-flow type qualifiers. A flow-sensitive, context-sensitive information-flow type system checks the information flow type qualifiers (IFT - Information Flow Type-Checker)
 		* The app store auditor uses the vendor-provided source code to manually verify declassifications
 		* Tailored towards Android Apps written in Java
 		* 4 factors in current app stores which make it hard to detect trojans
@@ -256,7 +256,10 @@
 		* IFT does not perform labor-intensive full functional verification, only information-flow verification (low cost)
 		* App developers and app source code are not trusted
 		* The proposed mechanism for expressing information flow policies has been implemented in a publicly-available system called **Sparta**
-		* Sources and Sinks. Example: @Source(Location) @Sink(INTERNET) double loc;
+		* The programmer provides two things in order to make Spart work:
+			* The programmed provides a **flow policy file**, which describes the types of information flows that are permitted in the program (RECORD_AUDIO -> FILESYSTEM)
+			* The programmed writes **Java type annotations** to express information-flow type qualifiers. For example: @Source(Location) @Sink(INTERNET) double loc;
+		* The arguments to @Source and @Sink are permissions drawn from the enriched permission system
 
 
 ### Lecture 11 - Security Testing & Fuzzing - Dec 1
