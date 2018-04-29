@@ -6,11 +6,17 @@
 
 
 * Literature:
-	* [Software security by Gary McGraw](../literature/Software_Security_-_Gary_McGraw.pdf)
-
+	* [Software Security by Gary McGraw](../literature/Software_Security_-_Gary_McGraw.pdf)
+	* [Software Security in Practice by Brian Chess & Brad Arkin](../literature/Software_Security_in_Practice_-_Brian_Chess_and_Brad_Arkin.pdf)
 
 
 ## Lecture 2 - Buffer overflows & platform-level countermeasures - Sept 15
+
+
+* Literature:
+	* [Sections 30.3 & 30.4 (on pages 645-656) of Low-level Software Security by Example by Ulfar Erlingsson et al.](../literature/low-level-security-by-example.pdf)
+	* Sections 3.1 & 3.2 of the lecture notes
+	* [Arstechnica article on BlueBorne bluetooth security bug](https://arstechnica.com/information-technology/2017/09/bluetooth-bugs-open-billions-of-devices-to-attacks-no-clicking-required/)
 
 
 ## Lecture 3 - More buffer overflow countermeasures and Static Analysis with PREfast & SAL - Sept 22
