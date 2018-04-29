@@ -260,7 +260,7 @@
 			* The programmed provides a **flow policy file**, which describes the types of information flows that are permitted in the program (RECORD_AUDIO -> FILESYSTEM)
 			* The programmed writes **Java type annotations** to express information-flow type qualifiers. For example: @Source(Location) @Sink(INTERNET) double loc;
 		* The arguments to @Source and @Sink are permissions drawn from the enriched permission system
-		* [Partial Qualifier Hierarchy](../images/partial_qualifier_hierarchy.PNG)
+		* ![Partial Qualifier Hierarchy](../images/partial_qualifier_hierarchy.PNG)
 
 
 ### Lecture 11 - Security Testing & Fuzzing - Dec 1
