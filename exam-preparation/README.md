@@ -362,7 +362,9 @@
 	* Keep the input language simple & clear
 * Protocol State Machines = Finite State Machines (FSM) = Deterministic Finite Automaton (DFA)
 * A state machine is **input enabled** if **in every state it is able to receive every message**
-* **State Machine Inference** using **L\* algorithm**	
+* **State Machine Inference** using **L\* algorithm** is effectively a form of **"stateful" fuzzing**
+* **Fuzzing or model-based testing**: Using the diagram as basis for "deeper" fuzz testing
+* No more prose specifications of protocol state machines!
 
 
 * Literature:
