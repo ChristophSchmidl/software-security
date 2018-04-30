@@ -592,6 +592,11 @@ kept; if not, the mutation is discarded.**
 ### Lecture 13 - LangSec & State Machine Inference - Dec 15
 
 * LangSec takes a systematic look at how to deal with **input languages** or **formats** to avoid typical input security problems
+* Root causes/Anti-patterns
+	* ad-hoc and imprecise notion of input validity
+	* parser differentials 
+	* mixing input recognition & processing 
+	* unchecked development of input languages
 * **Processing** involves **parsing/lexing** (relies on **syntax**) and **interpreting/executing** (relies on **semantics**)
 * **Anti-pattern 1 - Shotgun parsers**: **Handwritten** code that **incrementally** parses & interprets input, in a piecemeal fashion. Mixing input recognition & processing
 * **Anti-pattern 2 - Strings considered harmful**
