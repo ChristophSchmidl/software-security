@@ -363,6 +363,26 @@
 * Program verification tools, such as **ESC/Java2**, KeY, Krakatoa, can do program verification of JML-annotated Java code
 * JML syntax/keywords:
 	* JML annotations are added as special Java comments `/*@ .. @*/` or after `//@`
+	* Properties specified using Java syntax, extended with some operators: `\old( ), \result, \forall, \exists, ==> , ..`
+	* keywords: `requires, ensures, invariant, ....`
+* **JML Basics**:
+	* preconditions `requires`
+	* postconditions `ensures`
+	* exceptional postconditions `signals`
+	* (object) postconditions `invariant`	
+* ```
+public class ChipKnip{
+	private int balance;
+	//@ invariant 0 <= balance && balance < 500;
+	//@ requires amount >= 0;
+	//@ ensures balance <= \old(balance);
+	//@ signals (BankException) balance == \old(balance);
+	public debit(int amount) {
+		if (amount > balance) {
+			throw (new BankException("No way"));
+		}
+		balance = balance – amount;
+}	
 
 * Literature:
 	* Nothing
