@@ -176,6 +176,24 @@
 
 ### Lecture 2 - Buffer overflows & platform-level countermeasures - Sept 15
 
+* Never use gets, Use fgets(buf, size, file) instead
+* Don't use strcpy(dest, src), Use strncpy(dest, src, size) instead
+* code injection attack 
+* code reuse attack 
+* A string is a sequence of bytes terminated by a NULL byte
+* calloc = initialise memory to 0
+* format string attacks
+	* %x reads and prints bytes from stack
+	* %n writes the number of characters printed so far onto the stack
+* integer overflow
+* stack canaries
+* non-executable memory (NX)
+* Address Space Layout Randomization (ASLR)
+* Control-flow integrity (CFI)
+* Pointer encryption
+* Execution-aware memory protection 
+* Return-to-libc attacks
+* Return-Oriented-Programming (ROP)
 
 * Literature:
 	* [Sections 30.3 & 30.4 (on pages 645-656) of Low-level Software Security by Example by Ulfar Erlingsson et al.](../literature/low-level-security-by-example.pdf)
@@ -204,6 +222,7 @@
 
 ### Lecture 3 - More buffer overflow countermeasures and Static Analysis with PREfast & SAL - Sept 22
 
+* test
 
 * Literature:
 	* [C++ example used in PREfast demo](https://www.cs.ru.nl/E.Poll/ss/simple_demo_prefast.cpp)
@@ -215,6 +234,14 @@
 
 
 ### Lecture 4 - Language-based Security: 'Safe' programming languages - Sept 29
+
+* **Safety**: protecting a system from accidental failures (esp. protecting humans from harm)
+* **Security**: protecting a system from active attackers
+* **Memory-safety**
+	* programs can never access unallocated or de-allocated memory
+	* maybe also: program can never access uninitialised memory
+* Types assert invariant properties of program elements
+* **Type soundness** (aka type safety or strong typing) A language is type sound if the assertions are guaranteed to hold at run-time
 
 * Literature:
 	* Chapters 2 & 3 of lecture notes
