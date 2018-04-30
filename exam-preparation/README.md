@@ -240,12 +240,51 @@
 
 ### Lecture 7 - Sandboxing - Oct 20
 
+* Overview
+	* **Compartementalisation**
+	* **Classic OS access control**
+	* **Language-level access control**
+	* **Hardware-based sandboxing**
+* Complication: method calls. There are different possibilities here:
+	* allow action if top frame on the stack has permission
+	* only allow action if all frames on the stack have permission
+	* More flexible solution: stackwalking aka stack inspection	
+* Stack Walk Modifiers
+	* Enable_permission(P): don’t check my callers for this permission, I take full
+responsibility
+	* Disable_permission(P): don’t grant me this permission, I don’t need it
+* **Enclaves** isolates part of the code together with its data	
+
 * Literature:
 	* Chapter 4 of lecture notes
 
 
 
 ### Lecture 8 - Java secure programming guidelines, TOCTOU attacks - Oct 27
+
+* Java security guarantees
+	* memory safety
+	* strong typing
+	* visibility restrictions
+	* immutable fields 
+	* unextendable classes
+	* immutable objects
+	* sandboxing based on stackwalking
+* Java Class Loader: Records which classes have been loaded, and from where
+* Immutability of Strings,URLs,Permissions is crucial, because these objects are used in security decisions about access control 
+* Potential visibility loophole: reflection	
+* Serialisation in Java
+* Only data (ie. fields) is serialised, not the code (ie. methods). Fields can be marked transient to
+exclude them from serialisation
+
+* **Non-atomic check** and use aka **TOCTOU (Time of Check, Time of Use)* or **race conditions**
+	* Problem: some precondition required for an action is invalidated between the time it is checked and the time the action is performed
+		* Example 1: lpr -r
+		* Example 2: mkdir (this program is setuid root)
+		* Example 3: Servlets. Concurrent calls of doGet will be on the same HttpServlet
+	* Signs of trouble:
+		* Access to files using **filenames** rather than **file handles or file descriptors**
+		* Creating files or directories in publicly accessible places, for instance /tmp
 
 * Literature:
 	* [Statically Scanning Java Code: Finding Security Vulnerabilities](../literature/Statically_Scanning_Java_Code.pdf)
