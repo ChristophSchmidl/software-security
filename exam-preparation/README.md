@@ -297,12 +297,42 @@
 	* **noise**
 	* **power consumption**
 	* **EM radiation – aka TEMPEST attacks**
+* **Type-based information flow**
+	* **H(igh)** or confidential, secret
+	* **L(ow)** or public
+	* e : t means **e contains information of level t or lower**
+	* s : ok t means **s only writes to level t or higher**
+* **Soundness** of the type system:	programs that are well-typed do no leak
+* **Completeness** of the type system: programs that do not leak can be typed
+* **Non-interference (what can be observed)** gives a precise **semantics** for what
+“information flow” means
+* More permissive forms of information flow can allow **de-classification**, eg
+	* for confidentiality
+	* for integrity
+* **Taint user input**	
 
 * Literature:
 	* Chapter 5 of lecture notes
 
 
 ### Lecture 10 - Information Flow for Android Apps - Nov 24
+
+* Java types not expressive enough?
+* Type annotations & pluggable type systems
+	* Annotations can simply be **informal documentation** to help the programmer
+	* Annotations can be used to help **static analysis tools**
+	* Annotations on types can be used as **real types**
+* **SPARTA: Static Program Analysis for Reliable Trusted Apps**
+	* **code developer** does some work by adding annotations
+	* **human verifier** runs checker & performs manual checks
+	* Flows to CONDITIONAL for implicit flows
+* **Trusted Computing Base (TCB)**
+	* the Android OS, incl the Java VM
+	* the type checker for annotations
+	* the Java compiler & byte code verifier
+	* the annotations provided for the APIs
+	* the human verifier
+	* **not**: the annotations provided by the app developer
 
 * Literature:
 	* [Collaborative Verification of Information Flow for a High-Assurance App Store](../literature/Collaborative_Verification_of_Information_Flow_for_a_High-Assurance_App_Store.pdf)
