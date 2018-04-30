@@ -346,6 +346,22 @@
 
 ### Lecture 12 - Program Verification & Guest lecture by Wil Michiels (NXP/TUE) on Obfuscation - Dec 8
 
+* **Program verification**: Formally proving (in the mathematical/logical sense) that a program satisfies some property. **NB in industry, the term verification is used for testing**
+* **Assertions** is a common way to verify. For Methods or procedures, we can give **pre-** and **post-conditions**
+* How to verify complex code? 
+	* **Weakest precondition (or strongest postconditions)
+	* **Symbolic execution**
+	* **Loop invariant**
+* **Program Verification using Verification Condition Generation (VCGen)**
+	* Program is **annotated** with **properties** (the **specification**)
+	* Verification Condition Generator produces a set of **logical properties**, the so-called **verification conditions**
+	* If these verification conditions are true, the annotations are correct – ie the program satisfies the specification
+* Tricky issues in program verification
+	* **Pointers / References & the heap**
+	* **Concurrency**
+* **JML**: Formal Specification Language for Java
+* Program verification tools, such as **ESC/Java2**, KeY, Krakatoa, can do program verification of JML-annotated Java code		 	
+
 * Literature:
 	* Nothing
 
