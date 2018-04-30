@@ -351,9 +351,26 @@
 
 ### Lecture 13 - LangSec & State Machine Inference - Dec 15
 
+* LangSec takes a systematic look at how to deal with **input languages** or **formats** to avoid typical input security problems
+* **Processing** involves **parsing/lexing** (relies on **syntax**) and **interpreting/executing** (relies on **semantics**)
+* **Anti-pattern 1 - Shotgun parsers**: **Handwritten** code that **incrementally** parses & interprets input, in a piecemeal fashion. Mixing input recognition & processing
+* **Anti-pattern 2 - Strings considered harmful**
+* **LangSec principles**
+	* Precisely defined input languages
+	* Generated parser
+	* Complete parsing before processing 
+	* Keep the input language simple & clear
+* Protocol State Machines = Finite State Machines (FSM) = Deterministic Finite Automaton (DFA)
+* A state machine is **input enabled** if **in every state it is able to receive every message**
+* **State Machine Inference** using **L\* algorithm**	
+
+
 * Literature:
 	* [LangSec "manifesto"](../literature/langsec-manifesto.pdf)
 	* [Protocol State Machines and session languages](../literature/Protocol_state_machines_and_session_languages.pdf)
+		* Protocol state machines = finite state machines
+		* The research investigated the security of software for smartcards, incl. bank cards and e-passports, feature phone midlets, a hardware security token for internet banking, and networking protocols such as SSH and SSL/TLS
+		* **Happy flow**: a normal sequence of messages that happen in most or all ‘correct’ sessions.
 
 ### Lecture 14 - Discussion group project - Dec 22
 
