@@ -222,6 +222,23 @@
 
 ### Lecture 5 - Discussion PREfast project, Intro group project, Input Problems - Oct 6
 
+* Application Security Verification Standard (ASVS)
+
+* Overview:
+	* OS command injection
+	* path traversal (example: chroot)
+	* PHP injection
+		* Local File Inclusion (LFI)
+		* Remote File Inclusion (RFI)
+	* SQL injection
+		* second order sql injection
+		* Blind sql injection (a SQL injection where not the response itself is interesting, but the type of the response, or lack of response, leaks information to an attacker)
+	* HTML injection/XSS
+	* SSI (Server Side Includes) injection
+	* XSS (Cross Site Scripting)
+		* Countermeasure 1: httpOnly cookies
+		* Countermeasure 2: CSP (Content Security Policy) 
+
 * Literature:
 	* Nothing
 
