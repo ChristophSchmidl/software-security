@@ -371,18 +371,18 @@
 	* exceptional postconditions `signals`
 	* (object) postconditions `invariant`	
 * ```
-public class ChipKnip{
-	private int balance;
-	//@ invariant 0 <= balance && balance < 500;
-	//@ requires amount >= 0;
-	//@ ensures balance <= \old(balance);
-	//@ signals (BankException) balance == \old(balance);
-	public debit(int amount) {
-		if (amount > balance) {
-			throw (new BankException("No way"));
-		}
-		balance = balance – amount;
-}	
+	public class ChipKnip{
+		private int balance;
+		//@ invariant 0 <= balance && balance < 500;
+		//@ requires amount >= 0;
+		//@ ensures balance <= \old(balance);
+		//@ signals (BankException) balance == \old(balance);
+		public debit(int amount) {
+			if (amount > balance) {
+				throw (new BankException("No way"));
+			}
+			balance = balance – amount;
+	}	
 
 * Literature:
 	* Nothing
