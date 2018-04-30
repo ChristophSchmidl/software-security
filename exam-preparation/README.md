@@ -274,6 +274,30 @@
 
 ### Lecture 9 - Information Flow - Nov 17
 
+* Note the difference with access control:
+	* **access control is about access only**
+	* **information flow is also about what you do with data after you accessed it**
+* Information flow properties can be about **confidentiality** or **integrity**
+* Information Flow - Confidentiality
+	* `String hi; // security label secret`
+	* `String lo; // security label public`
+	* Outputs are dangerous for confidentiality
+*  Information Flow - Integrity
+	* `String hi; // high integrity (trusted) data `
+	* `String lo; // low integrity (untrusted) data`
+	* Inputs are dangerous for integrity	
+* There are (at least) two kinds of information flows:
+	* **direct** aka **explicit** flows	
+	* **indirect** aka **implicit** flows 
+		* Implicit flows can be **partial**, ie leak some but not all info
+* More subtle forms of **indirect** information flows can arise via **hidden channel** aka **covert channels** aka **side channels**
+	* **(non)termination**
+	* **execution time** 
+	* **exceptions**
+	* **noise**
+	* **power consumption**
+	* **EM radiation – aka TEMPEST attacks**
+
 * Literature:
 	* Chapter 5 of lecture notes
 
