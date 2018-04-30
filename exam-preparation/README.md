@@ -383,7 +383,7 @@
 			}
 			balance = balance – amount;
 	}	
-* Loop invariants: ```
+* ```
 	/*@ 
 	loop_invariant 0<= n && n < a.length &
 	(\forall int i; 0<= i & i < n;
