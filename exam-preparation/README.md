@@ -383,6 +383,10 @@
 			}
 			balance = balance – amount;
 	}	
+* What can you do with this?
+	* Documentation/specification
+	* Runtime Assertion Checking
+	* Compile Time Program Analysis
 
 * Literature:
 	* Nothing
