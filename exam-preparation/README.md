@@ -246,6 +246,17 @@
 
 ### Lecture 6 - Input problems: root causes and defenses - Oct 13
 
+* Zip-bombs
+* XML-bombs
+* Validation techniques
+	* indirect selection 
+	* white-listing
+	* black-listing
+* Client- vs Server-side validation
+* Double encoding of malicious input may allow the attacker to by-pass input validation	
+* Prepared statements
+* Stored Procedures
+
 * Literature:
 	* [Wyvern: Impacting Software Security via Programming Language Design](../literature/Wyvern_Impacting_Software_Security_via_Programming_Language_Design.pdf)
 		* Some people argue that system safety and security is a completely programming language agnostic topic. The authors of the paper disagree with this opinion and say that programming language design can have direct influence on the security of software systems. They defend this opinion by showcasing their programming language "Wyvern" (web programming language) in the context of command injections/SQL Injections.
