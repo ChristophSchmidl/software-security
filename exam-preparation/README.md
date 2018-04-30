@@ -156,6 +156,7 @@
 
 ### Lecture 1 - Introduction & Security in the SDLC (Security Development Life Cyle?) - Sept 8
 
+* **Trusted Computing Base**: TCB is the collection of software and hardware that we have to trust for our security 
 
 * Literature:
 	* [Software Security by Gary McGraw](../literature/Software_Security_-_Gary_McGraw.pdf)
@@ -222,7 +223,20 @@
 
 ### Lecture 3 - More buffer overflow countermeasures and Static Analysis with PREfast & SAL - Sept 22
 
-* test
+* PREfast is a lightweight static analysis tool for C(++)
+	* `_Check_return_ void *malloc(size_t s);`
+	* `void* memset( _Out_cap_(len) char *p, int v, size_t len);`
+* SAL annotations for buffer parameters
+	* `_In_`
+	* `_Inout_`
+	* `_Out_`
+* SAL annotations for buffer sizes
+	* `cap_(size)`
+	* `bytecap_(size)`
+* SAL pre- and postconditions
+	* `[SA_Pre(Tainted=SA_Yes)]`
+	* `[SA_Post(Tainted=SA_No)]`	
+* SAL (Standard Annotation Language) is a language for annotating C(++) code and libraries
 
 * Literature:
 	* [C++ example used in PREfast demo](https://www.cs.ru.nl/E.Poll/ss/simple_demo_prefast.cpp)
