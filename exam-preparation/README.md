@@ -349,7 +349,7 @@
 * **Program verification**: Formally proving (in the mathematical/logical sense) that a program satisfies some property. **NB in industry, the term verification is used for testing**
 * **Assertions** is a common way to verify. For Methods or procedures, we can give **pre-** and **post-conditions**
 * How to verify complex code? 
-	* **Weakest precondition (or strongest postconditions)
+	* **Weakest precondition (or strongest postconditions)**
 	* **Symbolic execution**
 	* **Loop invariant**
 * **Program Verification using Verification Condition Generation (VCGen)**
@@ -360,7 +360,9 @@
 	* **Pointers / References & the heap**
 	* **Concurrency**
 * **JML**: Formal Specification Language for Java
-* Program verification tools, such as **ESC/Java2**, KeY, Krakatoa, can do program verification of JML-annotated Java code		 	
+* Program verification tools, such as **ESC/Java2**, KeY, Krakatoa, can do program verification of JML-annotated Java code
+* JML syntax/keywords:
+	* JML annotations are added as special Java comments `/*@ .. @*/` or after `//@`
 
 * Literature:
 	* Nothing
