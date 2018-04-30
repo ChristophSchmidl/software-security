@@ -383,6 +383,13 @@
 			}
 			balance = balance – amount;
 	}	
+* Loop invariants: ```
+	/*@ 
+	loop_invariant 0<= n && n < a.length &
+	(\forall int i; 0<= i & i < n;
+	a[i] != null );
+	@*/
+
 * What can you do with this?
 	* Documentation/specification
 	* Runtime Assertion Checking
