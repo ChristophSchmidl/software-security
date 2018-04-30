@@ -315,6 +315,35 @@
 
 ### Lecture 11 - Security Testing & Fuzzing - Dec 1
 
+* **Abuse cases**
+* **Negative testing**: test which are supposed to fail
+* **Whitebox fuzzing** with SAGE - Looking at symbolic execution of the code
+* **Evolutionary/mutation based fuzzing** with afl - greybox, observing execution of the (instrumented) code
+* **Generational** aka **Grammar-based fuzzing**. Example: GSM
+* **Dumb fuzzing**
+* To test a **SUT (System Under Test)** we need two things
+	* **test suite**
+	* **a test oracle**: basic case - look out for crashes
+* Code coverage criteria to measure how good a test suite is include
+	* **statement coverage**
+	* **branch coverage**	
+* **Annotations** as test oracle:
+	* SAL/PREfast annotations of C/C++ code
+	* JML annotations of Java
+* Basic idea behind **fuzzing**: (semi) automatically generate random inputs and see if
+an application crashes
+* **Mutation-based** fuzzers: apply random mutations to existing valid inputs
+* **Generation-based** aka **grammar-based** fuzzers: generate semi-well-formed inputs from scratch, based on some knowledge of file format or network protocol
+* **Evolutionary fuzzers (afl)**: observe how inputs are processed to learn which mutations are
+interesting
+* **Whitebox approaches**: analyse the code to determine interesting inputs
+* Whitebox fuzzing using symbolic execution: SAGE (Scalable Automated Guided Execution)
+* **afl (American Fuzzy Lop)** takes an evolutionary approach to learn
+interesting mutations based on measuring code coverage
+	* basic idea: **if a mutation of the input triggers a new execution
+path through the code, then it is an interesting mutation & it is
+kept; if not, the mutation is discarded.**
+
 * Literature:
 	* [SAGE: whitebox fuzzing for security testing](http://queue.acm.org/detail.cfm?id=2094081)
 		* Today, hackers find security vulnerabilities in software products using two primary methods. **Code inspection of binaries** and **Blackbox Fuzzing**
